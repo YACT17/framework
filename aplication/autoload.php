@@ -1,0 +1,14 @@
+<?php
+
+/**
+  * Método __autoload
+  * 
+  * Método que sirve para autocargar todas la clases que se encuentra dentro de la carpeta libs
+  * 
+  * @param  $className nombre de la clase a cargar
+  * @author Edwin Poot <edwin.poot.diaz@gmail.com>
+  * @return object
+  */
+function __autoload($className){
+	require_once(ROOT."libs".DS.$className.".php");
+}
